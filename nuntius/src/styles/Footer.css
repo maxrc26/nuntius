@@ -1,0 +1,15 @@
+footer {
+    background-color: var(--color2);
+    height: 120px;
+    width: 100%;
+    padding: 40px;
+    position: relative;
+}
+
+footer img {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+}

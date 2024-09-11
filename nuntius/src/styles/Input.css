@@ -1,0 +1,82 @@
+.inputCustom {
+    position: relative;
+    margin-top: 0.4em;
+    width: fit-content;
+
+    & input {
+        background-color: var(--fondo);
+        color: var(--texto);
+        border: solid 2px var(--borde);
+        min-height: 30px;
+        padding-left: 10px;
+        position: relative;
+
+        &::placeholder {
+            color: #9A9A9A;
+        }
+    }
+
+    & label {
+        color: var(--texto);
+        font-size: 0.8em;
+        line-height: 0.8em;
+        display: none;
+        position: absolute;
+        top: -0.4em;
+        left: 12px;
+        z-index: 0;
+
+        &::before {
+            background-color: var(--fondo);
+            content: "";
+            display: block;
+            height: 2px;
+            width: calc(100% + 8px);
+            z-index: -1;
+            position: absolute;
+            top: 0.4em;
+            left: -4px;
+        }
+    }
+
+    & p {
+        height: 100%;
+        font-size: 24px;
+        vertical-align: middle;
+
+        position: absolute;
+        top: 0;
+        right: 10px;
+
+        &:hover {
+            cursor: pointer;
+            color: var(--bordeActivo);
+        }
+    }
+
+    & input:focus {
+        outline: none;
+        border: solid 2px var(--bordeActivo);
+
+        &+label {
+            display: block;
+            animation: CustomInputAnimation 0.15s;
+        }
+    }
+
+    & input:focus::placeholder {
+        color: transparent;
+    }
+}
+
+@keyframes CustomInputAnimation {
+    from {
+        transform: translateY(20px);
+        font-size: initial;
+    }
+
+    to {
+        transform: translateY(0);
+        font-size: 0.8em;
+    }
+}

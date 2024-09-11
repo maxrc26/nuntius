@@ -1,0 +1,100 @@
+.day {
+    --fondo: #EEE;
+    --texto: #333;
+}
+
+.night {
+    --fondo: #333;
+    --texto: #EEE;
+}
+
+.nightmodeCustom {
+    background-color: #101010;
+    min-height: 30px;
+    min-width: 54px;
+    border-radius: 30px;
+    border: none;
+    position: relative;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    & div {
+        color: white;
+        background-color: transparent;
+        height: calc(100% - 10px);
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+
+        & img {
+            height: 100%;
+            aspect-ratio: 1 / 1;
+            animation: CustomNightmodeAnimation 0.5s;
+        }
+    }
+}
+
+#nightmodeCustomfalse {
+    right: 5px;
+    &::after {
+        content: "";
+        display: block;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: -25px;
+        background-color: #F0F0F0;
+        animation: CustomNightmodeAnimationFalse 0.5s;
+    }
+}
+
+#nightmodeCustomtrue {
+    left: 5px;
+    &::after {
+        content: "";
+        display: block;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        right: -25px;
+        background-color: #F0F0F0;
+        animation: CustomNightmodeAnimationTrue 0.5s;
+    }
+}
+
+@keyframes CustomNightmodeAnimation {
+    from {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes CustomNightmodeAnimationFalse {
+    from {
+        transform: translateX(20px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes CustomNightmodeAnimationTrue {
+    from {
+        transform: translateX(-20px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,40 @@
+main {
+    background-color: var(--fondo);
+    color: var(--texto);
+    height: calc(100vh - 120px);
+    width: 85%;
+    padding: 40px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+.desplegada {
+    width: calc(100% - 60px);
+    animation: desplegarMain 0.25s;
+}
+
+.replegada {
+    width: 85%;
+    animation: retraerMain 0.25s;
+}
+
+@keyframes desplegarMain {
+    from {
+        width: 85%;
+    }
+
+    to {
+        width: calc(100% - 60px);
+    }
+}
+
+@keyframes retraerMain {
+    from {
+        width: calc(100% - 60px);
+    }
+
+    to {
+        width: 85%;
+    }
+}

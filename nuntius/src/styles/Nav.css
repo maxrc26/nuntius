@@ -1,0 +1,121 @@
+nav {
+    background-color: var(--color1);
+    height: calc(100vh - 120px);
+    width: 15%;
+    padding: 40px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    animation: desplegarNav 0.25s;
+    
+}
+
+nav h1:hover {
+    cursor: pointer;
+    color: var(--color3);
+}
+
+nav ul li {
+    height: 24px;
+    list-style: none;
+    font-weight: bolder;
+    margin-bottom: 16px;
+    position: relative;
+
+    &:hover {
+        cursor: pointer;
+        color: var(--color3);
+
+        & img {
+            background-color: var(--color3);
+        }
+    }
+}
+
+nav ul li img {
+    background-color: #202020;
+    height: 24px;
+    width: 24px;
+}
+
+nav ul li h4 {
+    height: 100%;
+    line-height: 24px;
+    position: absolute;
+    top: 0;
+    left: 32px;
+}
+
+#botonDesplegar {
+    font-size: 24px;
+    line-height: 24px;
+    min-height: fit-content;
+    min-width: fit-content;
+    height: fit-content;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    &:hover,
+    &:active {
+        color: var(--color3);
+    }
+}
+
+.navMin {
+    width: 60px;
+    padding: 40px 18px;
+    animation: retraerNav 0.25s;
+
+    & h1 {
+        writing-mode: vertical-lr;
+        line-height: 24px;
+    }
+
+    & p,
+    h4 {
+        display: none;
+    }
+}
+
+@keyframes desplegarNav {
+    from {
+        width: 60px;
+        padding: 40px 18px;
+    }
+
+    to {
+        width: 15%;
+        padding: 40px;
+    }
+}
+
+@keyframes retraerNav {
+    from {
+        width: 15%;
+        padding: 40px;
+    }
+
+    to {
+        width: 60px;
+        padding: 40px 18px;
+    }
+}
+
+@keyframes slideNav {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}

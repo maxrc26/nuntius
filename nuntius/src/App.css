@@ -1,0 +1,59 @@
+:root {
+  --color1: #FECEA8;
+  --color2: #FF847C;
+  --color3: #E84A5F;
+
+  --fondo: #EEEEEE;
+  --texto: #333333;
+
+  --borde: #FF847C;
+  --bordeActivo: #E84A5F;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "Space Grotesk";
+}
+
+input {
+  font-size: 14px;
+  line-height: 14px;
+  border-radius: 6px;
+}
+
+button {
+  background-color: var(--color1);
+  min-height: 30px;
+  min-width: 120px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.8em;
+
+  &:hover, &:active {
+    cursor: pointer;
+    background-color: var(--color2);
+  }
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 14px;
+}
