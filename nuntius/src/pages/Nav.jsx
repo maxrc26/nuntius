@@ -38,6 +38,7 @@ export const Nav = () => {
       <h1 onClick={() => navigate('/')}>PAGINA</h1>
       <p>Bienvenido {usuario}</p><br />
       <ul>
+        <li onClick={() => navigate('/')}><img src={imgUsuario} /><h4>Inicio</h4></li>
         <li onClick={() => navigate('/usuario')}><img src={imgUsuario} /><h4>Usuario</h4></li>
         <li onClick={() => navigate('/ajustes')}><img src={imgAjustes} /><h4>Ajustes</h4></li>
       </ul>
